@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Video Kuis — Sistem Pencernaan Manusia</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- START / NAMA -->
+  <div id="startScreen" class="overlay active">
+    <div class="card intro-card">
+      <h1>Sistem Pencernaan Manusia</h1>
+      <input id="playerName" type="text" placeholder="Masukkan nama peserta..." autocomplete="off" />
+      <div class="row">
+        <button id="startBtn" class="btn primary">Mulai</button>
+      </div>
+      <p class="hint">Nama akan disimpan untuk papan peringkat.</p>
+    </div>
+  </div>
+
+  <!-- VIDEO -->
+  <div class="video-wrap">
+    <video id="quizVideo" controls preload="metadata" playsinline>
+      <source src="Produk kelompok 8_SIstem Pencernaan Manusia (2).mp4" type="video/mp4" />
+      Browser kamu tidak mendukung video.
+    </video>
+  </div>
+
+  <!-- OVERLAY SOAL (di-attach ke fullscreen element saat fullscreen) -->
+  <div id="quizOverlay" class="overlay">
+    <div class="card quiz-card">
+      <div class="q-header">
+        <div class="q-title">Pertanyaan</div>
+        <div class="q-info">Skor: <span id="liveScore">0</span></div>
+      </div>
+
+      <div id="questionText" class="question-text"></div>
+      <div id="options" class="options"></div>
+
+      <div class="actions">
+        <button id="submitAnswer" class="btn primary">Kirim Jawaban</button>
+        <button id="continueVideo" class="btn" style="display:none;">Lanjutkan Video</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEEDBACK BESAR -->
+  <div id="bigFeedback" class="feedback-overlay">
+    <div id="feedbackBox" class="feedback-box"></div>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div id="scoreboard" class="overlay">
+    <div class="card score-card">
+      <h2>Dashboard Skor Akhir</h2>
+      <p id="finalScoreText"></p>
+      <h3>Papan Peringkat</h3>
+      <ol id="leaderboard" class="leaderboard"></ol>
+      <div class="row">
+        <button id="playAgain" class="btn">Main Lagi</button>
+        <button id="resetScores" class="btn danger">Reset Semua Skor</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- AUDIO (file harus ada di folder yang sama) -->
+  <audio id="soundCorrect" src="successed-295058.mp3" preload="auto"></audio>
+  <audio id="soundWrong" src="wrong-buzzer-6268.mp3" preload="auto"></audio>
+  <audio id="soundApplause" src="applause-236785.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
