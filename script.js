@@ -1,6 +1,6 @@
 // FINAL script.js — versi lengkap (dashboard di akhir video, full-screen safe, anti-skip hybrid)
 // Pastikan file berikut berada di folder yang sama:
-// - Produk kelompok 8_SIstem Pencernaan Manusia (2).mp4
+// - Produk kelompok 8_SIstem Pencernaan Manusia.mp4
 // - successed-295058.mp3
 // - wrong-buzzer-6268.mp3
 // - applause-236785.mp3
@@ -248,3 +248,4 @@ window.addEventListener('load', ()=>{
   attachOverlay(SCOREBOARD);
   populateLeaderboardUI(readLeaderboard());
 });
+
